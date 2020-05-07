@@ -1,0 +1,12 @@
+Compile error: b"In file included from /tmp/submissionuzyq3emq/tmp_lijlwme.cpp:360:
+In file included from /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/iomanip:43:
+In file included from /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/locale:41:
+In file included from /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/c++/8/bits/locale_facets_nonio.h:2010:
+In file included from /usr/bin/../lib/gcc/x86_64-linux-gnu/8/../../../../include/x86_64-linux-gnu/c++/8/bits/messages_members.h:36:
+/usr/include/libintl.h:62:28: fatal error: expected ')'
+                       unsigned long int __n)
+                                                                ^
+/usr/include/libintl.h:61:23: note: to match this '('\nextern char *ngettext (const char *__msgid1, const char *__msgid2,
+                      ^
+                      1 error generated.
+"

@@ -1,0 +1,64 @@
+std::string str, name, surname, prev_names, prev_surnames;
+        int changed = 0;
+        for (int i = std::max(max_name_year, year); i > 0; i--)
+        {
+            if (names.count(i) > 0 && i <= year)
+            {
+                if (!changed)
+                {
+                    name = names[i];
+                }
+                else if (changed == 1)
+                {
+                    prev_names += " (" + names[i];
+                }
+                else
+                {
+                    prev_names += ", " + names[i];
+                }
+            }
+        }
+        if (changed)
+        {
+            prev_names += ")";
+        }
+        changed = 0;
+        for (int i = std::max(max_surname_year, year); i > 0; i--)
+        {
+            if (surnames.count(i) > 0 && i <= year)
+            {
+                if (!changed)
+                {
+                    surname = surnames[i];
+                }
+                else if (changed == 1)
+                {
+                    surprev_names += " (" + surnames[i];
+                }
+                else
+                {
+                    surprev_names += ", " + surnames[i];
+                }
+            }
+            if (changed)
+            {
+                surprev_names += ")";
+            }
+            if (name.size() > 0 && surname.size() > 0)
+            {
+                str += name + ' ' + surname;
+            }
+            else if (name.size() > 0)
+            {
+                str += name + " with unknown last name";
+            }
+            else if (surname.size() > 0)
+            {
+                str += surname;
+                str += " with unknown first name";
+            }
+            else
+            {
+                str = "Incognito";
+            }
+            return str;
